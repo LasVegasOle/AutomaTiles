@@ -1,22 +1,18 @@
-/*
- * This test file, tests setColorRGB function.
- * Sweeping colors components from 0 to 255
- */
-                           
-void setup() {  
-   setButtonCallback(button); 
-   setStepCallback(step);
-   setColorRGB(0, 0, 255);
-   fadeTo(255, 0 , 0, 1000);
+int btnPin = A2;
+int fetPin = 0;
+int fetPin2 = 1;
+
+    
+void setup() {      
+
+  pinMode(fetPin, OUTPUT); 
+  pinMode(fetPin2, OUTPUT);  
 }
+
 
 void loop() {
-}
 
-void button() {
+  int a= analogRead(btnPin);
+  analogWrite(fetPin,a/4);
+  analogWrite(fetPin2,a/4);
 }
-
-void step() {
-    // discrete time logic here
-}
-

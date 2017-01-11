@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
     //rgb from = {255, 85, 0}; rgb to = {255, 0, 255};  // Hue 20 to 300
     setColor(from.r, from.g, from.b);
     //pulse(999);
-    fadeTo(to.r, to.g, to.b, 10000);
+    fadeTo(to.r, to.g, to.b, 4000);
     while(1){ 
         updateLed();
         delay(30);

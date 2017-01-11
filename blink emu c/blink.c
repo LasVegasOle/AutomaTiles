@@ -108,12 +108,12 @@ void fadeUpdate(void) {
 	//sendColor(LEDCLK, LEDDAT, outColor);
 	// Terminal bar
 	rgb out = hsv2rgb(fading.currHSV);
-	printf("R = %d, G = %d, B = %d \n", out.r, out.g, out.b);
+	printf("R = %d, G = %d, B = %d, H = %d, cntr = %d \n", out.r, out.g, out.b, fading.currHSV.h, fading.fadeCntr);
 
-	for (int i = 0; i < fading.currHSV.h; ++i) {
+	/*for (int i = 0; i < fading.currHSV.h; ++i) {
 		printf("#");
 	}
-	printf("\n");
+	printf("\n");*/
 	
 	// Only fade if the number of led fade refreshes is bigger than 0!
 	if (fading.fadeCntr--) {

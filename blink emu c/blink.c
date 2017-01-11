@@ -107,6 +107,9 @@ void fadeUpdate(void) {
 	// Output current color 
 	//sendColor(LEDCLK, LEDDAT, outColor);
 	// Terminal bar
+	rgb out = hsv2rgb(fading.currHSV);
+	printf("R = %d, G = %d, B = %d \n", out.r, out.g, out.b);
+
 	for (int i = 0; i < fading.currHSV.h; ++i) {
 		printf("#");
 	}

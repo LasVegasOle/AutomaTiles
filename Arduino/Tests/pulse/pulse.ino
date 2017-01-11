@@ -6,10 +6,10 @@
 void setup() {  
    setButtonCallback(button); 
    setStepCallback(step);
-   setColorRGB(255, 0, 0);
+   setColorRGB(170, 255, 0);
    //blink(1000);
-   //pulse(1000);
-   fadeTo(0, 0, 255, 4000);
+   //pulse(2000);
+   fadeTo(0, 255, 255, 10000);
 }
 
 void loop() {
@@ -17,7 +17,7 @@ void loop() {
 
 void button() {
      setColorRGB(170, 255, 0);
-     fadeTo(0, 255, 255, 4000);
+     fadeTo(0, 255, 255, 10000);
 }
 
 void step() {
